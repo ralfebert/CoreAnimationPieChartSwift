@@ -11,7 +11,6 @@
 
 @interface PieSliceLayer : CALayer
 
-
 @property (nonatomic) CGFloat startAngle;
 @property (nonatomic) CGFloat endAngle;
 

@@ -84,8 +84,6 @@
 	int clockwise = self.startAngle > self.endAngle;
 	CGContextAddArc(ctx, center.x, center.y, radius, self.startAngle, self.endAngle, clockwise);
 
-//	CGContextAddLineToPoint(ctx, center.x, center.y);
-
 	CGContextClosePath(ctx);
 	
 	// Color it

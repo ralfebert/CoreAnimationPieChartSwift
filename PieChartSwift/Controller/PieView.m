@@ -12,7 +12,6 @@
 
 #define DEG2RAD(angle) angle*M_PI/180.0
 
-
 @interface PieView() {
 	NSMutableArray *_normalizedValues;
 	CALayer *_containerLayer;
@@ -77,80 +76,15 @@
 	[self updateSlices];
 }
 
-//-(CGPathRef)createPieSliceWithCenter:(CGPoint)center
-//				radius:(CGFloat)radius
-//				startAngle:(CGFloat)degStartAngle
-//				endAngle:(CGFloat)degEndAngle {
-//	
-//	UIBezierPath *piePath = [UIBezierPath bezierPath];
-//	[piePath moveToPoint:center];
-//	
-//	[piePath addLineToPoint:CGPointMake(center.x + radius * cosf(DEG2RAD(degStartAngle)), center.y + radius * sinf(DEG2RAD(degStartAngle)))];
-//	
-//	[piePath addArcWithCenter:center radius:radius startAngle:DEG2RAD(degStartAngle) endAngle:DEG2RAD(degEndAngle) clockwise:YES];
-//	
-//	//	[piePath addLineToPoint:center];
-//	[piePath closePath]; // this will automatically add a straight line to the center
-//
-//	return piePath.CGPath;
-//}
-
-//-(CAShapeLayer *)createPieSlice {
-//	
-//	CGPoint center = CGPointMake(100.0, 100.0);
-//	CGFloat radius = 100.0;
-//
-//	CGPathRef fromPath = [self createPieSliceWithCenter:center radius:radius startAngle:-60.0 endAngle:60.0];
-//	CGPathRef toPath = [self createPieSliceWithCenter:center radius:radius startAngle:120.0 endAngle:-120.0];
-//
-//	CAShapeLayer *slice = [CAShapeLayer layer];
-//	slice.fillColor = [UIColor redColor].CGColor;
-//	slice.strokeColor = [UIColor blackColor].CGColor;
-//	slice.lineWidth = 3.0;
-//	slice.path = fromPath;
-//
-//	
-//	CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"path"];
-//	anim.duration = 1.0;
-//	
-//	// flip the path
-//	anim.fromValue = (__bridge id)fromPath;
-//	anim.toValue = (__bridge id)toPath;
-//	anim.removedOnCompletion = NO;
-//	anim.fillMode = kCAFillModeForwards;
-//	
-//	[slice addAnimation:anim forKey:nil];
-//	return slice;
-//}
-
 -(void)willMoveToSuperview:(UIView *)newSuperview {
 	CAShapeLayer *circleLayer = [CAShapeLayer layer];
 	
 	CGPoint offset = CGPointMake((self.bounds.size.width-150)/2, (self.bounds.size.height-150.0)/2);
 	circleLayer.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(offset.x, offset.y, 150.0, 150.0)].CGPath;
 	circleLayer.fillColor = [UIColor colorWithWhite:0.25 alpha:1.0].CGColor;
-//	circleLayer.shadowOffset = CGSizeMake(-2.0, -2.0);
-//	circleLayer.shadowColor = [UIColor blackColor].CGColor;
-//	circleLayer.shadowRadius = 4.0;
-//	circleLayer.shadowOpacity = 0.75;
 	
 	[self.layer addSublayer:circleLayer];	
-	
-//	CAShapeLayer *circleLayer = [CAShapeLayer layer];
-//	
-//	CGPoint offset = CGPointMake(0.0, 0.0);
-//	circleLayer.path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(offset.x, offset.y, 200.0, 200.0)].CGPath;
-//	circleLayer.fillColor = [UIColor colorWithWhite:0.75 alpha:1.0].CGColor;
-//	circleLayer.strokeColor = [UIColor grayColor].CGColor;
-//	circleLayer.lineWidth = 1;
-//	circleLayer.shadowOffset = CGSizeMake(-2.0, -2.0);
-//	circleLayer.shadowColor = [UIColor blackColor].CGColor;
-//	circleLayer.shadowRadius = 4.0;
-//	circleLayer.shadowOpacity = 0.75;
-//
-//	[self.layer addSublayer:circleLayer];	
-	
-//	[self.layer addSublayer:[self createPieSlice]];
+
 }
 
 -(void)updateSlices {
@@ -196,4 +130,5 @@
 		index++;
 	}
 }
+
 @end
