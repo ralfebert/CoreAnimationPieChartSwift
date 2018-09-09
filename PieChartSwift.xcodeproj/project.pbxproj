@@ -7,27 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF50B63E2145A80300C7ADD9 /* PSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF50B63D2145A80300C7ADD9 /* PSViewController.xib */; };
+		BF50B63E2145A80300C7ADD9 /* PieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF50B63D2145A80300C7ADD9 /* PieViewController.xib */; };
+		BF50B6442145AB1300C7ADD9 /* PieSliceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50B6432145AB1300C7ADD9 /* PieSliceLayer.swift */; };
+		BF50B6462145AE8B00C7ADD9 /* PieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50B6452145AE8B00C7ADD9 /* PieViewController.swift */; };
+		BF50B6482145AF1B00C7ADD9 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF50B6472145AF1B00C7ADD9 /* PieView.swift */; };
 		BF_191875505936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = VG_264225247746 /* LaunchScreen.storyboard */; };
-		BF_303219550263 /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = "FR_418344524614-1" /* PieView.m */; };
 		BF_324858865360 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_852022975761 /* AppDelegate.swift */; };
 		BF_406424446095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_935518626565 /* Assets.xcassets */; };
-		BF_490779389739 /* PSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = "FR_252679242220-1" /* PSViewController.m */; };
-		BF_678130625562 /* PieSliceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = "FR_501540992284-1" /* PieSliceLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF50B63D2145A80300C7ADD9 /* PSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSViewController.xib; sourceTree = "<group>"; };
-		BF50B6422145A83700C7ADD9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		BF50B63D2145A80300C7ADD9 /* PieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieViewController.xib; sourceTree = "<group>"; };
+		BF50B6432145AB1300C7ADD9 /* PieSliceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieSliceLayer.swift; sourceTree = "<group>"; };
+		BF50B6452145AE8B00C7ADD9 /* PieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieViewController.swift; sourceTree = "<group>"; };
+		BF50B6472145AF1B00C7ADD9 /* PieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
 		FR_157197865174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_160170399992 /* PieChartSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PieChartSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_252679242220 /* PSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSViewController.h; sourceTree = "<group>"; };
-		"FR_252679242220-1" /* PSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSViewController.m; sourceTree = "<group>"; };
 		FR_264225247746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FR_418344524614 /* PieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieView.h; sourceTree = "<group>"; };
-		"FR_418344524614-1" /* PieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
-		FR_501540992284 /* PieSliceLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieSliceLayer.h; sourceTree = "<group>"; };
-		"FR_501540992284-1" /* PieSliceLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieSliceLayer.m; sourceTree = "<group>"; };
 		FR_852022975761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FR_935518626565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,7 +37,6 @@
 				FR_157197865174 /* Info.plist */,
 				VG_264225247746 /* LaunchScreen.storyboard */,
 				G_5202325740885 /* Controller */,
-				BF50B6422145A83700C7ADD9 /* Bridging-Header.h */,
 			);
 			path = PieChartSwift;
 			sourceTree = "<group>";
@@ -49,13 +44,10 @@
 		G_5202325740885 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FR_501540992284 /* PieSliceLayer.h */,
-				"FR_501540992284-1" /* PieSliceLayer.m */,
-				FR_418344524614 /* PieView.h */,
-				"FR_418344524614-1" /* PieView.m */,
-				FR_252679242220 /* PSViewController.h */,
-				"FR_252679242220-1" /* PSViewController.m */,
-				BF50B63D2145A80300C7ADD9 /* PSViewController.xib */,
+				BF50B6432145AB1300C7ADD9 /* PieSliceLayer.swift */,
+				BF50B6472145AF1B00C7ADD9 /* PieView.swift */,
+				BF50B6452145AE8B00C7ADD9 /* PieViewController.swift */,
+				BF50B63D2145A80300C7ADD9 /* PieViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,7 +118,7 @@
 			files = (
 				BF_406424446095 /* Assets.xcassets in Resources */,
 				BF_191875505936 /* LaunchScreen.storyboard in Resources */,
-				BF50B63E2145A80300C7ADD9 /* PSViewController.xib in Resources */,
+				BF50B63E2145A80300C7ADD9 /* PieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +130,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_324858865360 /* AppDelegate.swift in Sources */,
-				BF_490779389739 /* PSViewController.m in Sources */,
-				BF_678130625562 /* PieSliceLayer.m in Sources */,
-				BF_303219550263 /* PieView.m in Sources */,
+				BF50B6482145AF1B00C7ADD9 /* PieView.swift in Sources */,
+				BF50B6442145AB1300C7ADD9 /* PieSliceLayer.swift in Sources */,
+				BF50B6462145AE8B00C7ADD9 /* PieViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +160,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PieChartSwift;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "PieChartSwift/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -183,7 +174,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PieChartSwift;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "PieChartSwift/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
